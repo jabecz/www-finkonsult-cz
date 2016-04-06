@@ -1,0 +1,49 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+body {
+  background: #fff url('/img/bg.png');
+}
+
+p {
+  text-align: justify;
+}
+
+.container {
+  background-color: #fff;
+  padding-top: 45px;
+}
+
+
+
+.pechmannova-partners {
+  height: 45px;
+  width: 243px;
+  background: url('/img/pechmannova-partners.svg') no-repeat left;
+}
+
+.audit-finkonsult-tax-finkonsult {
+  height: 43px;
+  width: 165px;
+  margin-top: 2px;
+  background: url('/img/audit-finkonsult-tax-finkonsult.svg') no-repeat right;
+}
+
+
+//debug
+/**
+header, footer {
+  background-color: #efe;
+}
+
+section {
+  background-color: #eef;
+}
+
+aside {
+  background-color: #fee;
+}
+**/
+

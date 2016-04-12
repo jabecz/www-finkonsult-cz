@@ -6,35 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
     <link rel="stylesheet" href="{{ "main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-    {% include bootstrap.html %}
+    {% include bootstrap.html %}    
   </head>
   <body>
-    <div class="container">
-      <header class="row">
-        <div class="logos col-lg-9">
-          <div class="pechmannova-partners col-sm-6"></div>
-          <div class="audit-finkonsult-tax-finkonsult col-sm-6"></div>
-        </div>
-        <div class="lang col-lg-3">lang</div>
-      </header>
+    <div class="container-fluid">
+      <div class="container header">
+        <header class="row">
+          <div class="logos col-lg-9">
+              <div class="pechmannova-partners col-sm-6"></div>
+              <div class="audit-finkonsult-tax-finkonsult col-sm-6"></div>
+            <nav class="navbar navbar-default">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Služby</a></li>
+                <li><a href="#">O nás</a></li>
+                <li><a href="#">Náš tým</a></li>
+                <li><a href="#">Bulletiny</a></li>
+                <li><a href="#">Kariéra</a></li>
+                <li><a href="#">Extranet</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="lang col-lg-3">lang</div>
+        </header>
+      </div>
     </div>
-    <div class="container">
+    <div class="container body">
       <div class="row">
         <section class="col-lg-9">
-          <nav class="navbar navbar-default">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Služby</a></li>
-              <li><a href="#">O nás</a></li>
-              <li><a href="#">Náš tým</a></li>
-              <li><a href="#">Bulletiny</a></li>
-              <li><a href="#">Kariéra</a></li>
-              <li><a href="#">Extranet</a></li>
-            </ul>
-          </nav>
+
           {{ content }}
         </section> 
         <aside class="col-lg-3">
@@ -42,7 +46,7 @@
         </aside>
       </div>
     </div>
-    <div class="container">
+    <div class="container footer">
       <footer class="row">
         <div class="col-lg-9">
           <p>footer</p>
